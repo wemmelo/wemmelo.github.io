@@ -1,0 +1,24 @@
+html{
+   
+    font-size: 62,5%; /* (10px (o que eu quero)/16px (padrão do navegador) *100)
+                         assim a fonte padrão do navegador é de 10px
+                       isso serve para facilicar as contas dos numeros relativos
+                       do restante do documento como % em rem */ 
+
+}
+
+body {
+/*posicionamento*/
+
+/*display e box model*/
+    margin: 0;
+/*cores*/
+
+/*texto*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; /* 14px o que eu quero /10px do html = 1.4rem */
+/*outros*/
+  }
+
+  
+  

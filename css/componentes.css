@@ -1,0 +1,202 @@
+/*--------------------*\
+  PLANO
+\*--------------------*/
+.plano {
+  position: relative; /* serve apenas para servir de referência para o plano--mais-popular::after
+  para ele não utilizar a posição do bootstrap-grid */
+  padding: 10px;
+  border: 1px solid #95a4a5;
+
+  font-size: 1.4rem; /* 14px/10px=1.4rem */ 
+}
+
+.plano--mais-popular::after {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+
+  padding: 0 10px;
+  
+  background-color: #c20303;
+  color: #fff;
+
+  font-size: 0.7142em;
+  line-height: 2.5;
+
+  content: "MAIS POPULAR";
+}
+
+.plano__cabecalho {
+  /* display e box model */
+  margin: -10px;
+  margin-bottom: 0;
+  /*cores*/
+  background-color: #95a4a5;
+  color: #fff;
+  /*texto*/
+  text-align: center;
+  line-height: 2.5;
+  font-weight: normal;
+  font-size: 2em;
+}
+
+.plano__preco {
+  margin: 20px 0;
+
+  text-align: center;
+  font-size: 2em;
+}
+
+.plano__caracteristicas {
+  padding: 0;
+  margin: 20px 0; /* 20px o que eu quero
+                      dividido por 14px do paí plano
+                      = 1.4285 em, faço isso de acordo com a necessidade */
+
+  font-size: 1em;
+  /*outros*/
+  list-style: none;
+}
+
+.plano__caracteristicas > li {
+  text-align: center;
+}
+
+.plano__rodape {
+  text-align: center;
+}
+
+
+/*--------------------*\
+  BOTAO
+\*--------------------*/
+.botao {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+
+  background-color: #bbb;
+  color: #fff;
+  
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.botao:hover, .botao:focus {
+  background-color: #aaa;
+  color: #fff;
+  
+  text-decoration: none;
+ 
+}
+
+.botao--assinar {
+  background-color: #127d00;
+}
+
+.botao--assinar:hover, .botao--assinar:focus {
+  background-color: #0e6400;
+}
+
+.botao--principal{
+  border-radius: 10px;
+
+  background-color: #004b86;
+}
+
+.botao--principal:hover, .botao--principal:focus {
+  background-color: #003b6a;
+}
+
+/*--------------------*\
+  CHAMADA
+\*--------------------*/
+.chamada{
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.chamada__titulo{
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 3.375em; /* eu quero 54px
+                      54px/16px (que é o tamanho da fonte da classe pai)=3.375*/
+  line-height: 0.9; /*altura da linha*/
+  text-shadow: 1px 1px #313131; /* eixox eixoy cor */  
+}
+
+.chamada__subtitulo{
+  margin: 60px 0; /* aumenta a distância para o paragráfo do título */
+
+  color: #fff;
+
+  font-size: 1em;
+}
+
+.chamada__acao{
+  font-size: 1em;
+}
+
+@media(min-width: 992px){ /* quando a tela passar de 992px ele aplicará as regras do bloco abaixo */
+  .chamada{
+    padding-left: 10%;
+    padding-right: 10%;
+
+    font-size: 2.2rem;
+  }
+}
+
+/*--------------------*\
+  DEPOIMENTO
+\*--------------------*/
+.depoimento{
+
+  font-size: 2.2rem;
+}
+
+/* 992 px é o breakpoint para a tela do desktop */
+@media(min-width: 992px){
+  .depoimento {
+    padding-left: 15%;
+    padding-right: 15%;
+
+    font-size: 2.8rem;
+  }
+}
+
+.depoimento > blockquote{
+  position: relative;
+  margin: 0;
+  padding: 0 60px;
+
+  text-align: center;
+  font-size: 1em;
+}
+
+.depoimento > blockquote::before{
+  position: absolute;
+  top: -0.35em; /* 62/1760.3522 */
+  left: 0;
+
+  color: #ccc;
+
+  font-size: 8em; /* 176px */ 
+
+  content: "\201c";
+}
+
+.depoimento__autor{
+  margin-top: 40px; /* da um espaço da foto para o depoimento */
+
+  text-align: center;
+  font-size: 0.7272em; /* eu quero 16px, então 16/22=0,7272 */ 
+}
+
+.depoimento__autor > img{
+  border-radius: 50%;
+}
+
+.depoimento__autor > p{
+  margin-top: 10px;
+}
